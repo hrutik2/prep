@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Bubbling Demo</title>
+</head>
+<body>
+<div id="outer" style="height: 200px; width: 200px; background-color: aqua; padding:20px ;">
+  <section id="middle" style="height: 150px; width: 150px; background-color: red; padding:20px ; ">
+    <button id="inner">Click me</button>
+  </section>
+</div>
+
+</body>
+<script>
+  let outer=document.getElementById("outer")
+  let middle=document.getElementById("middle")
+  let inner=document.getElementById("inner")
+ 
+
+  inner.addEventListener("click",()=>{
+   
+    console.log("You clicked the inner button")
+  })
+  middle.addEventListener("click",()=>{
+   
+   console.log("You clicked the middle area")
+ })
+  outer.addEventListener("click",(e)=>{
+   
+    console.log("You clicked the outer area")
+    
+  })
+  
+    
+</script>
+</html>
